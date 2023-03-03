@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Content from "../src/components/Content";
+import Content from "./components/Content";
 import "./App.css";
 
 function App() {
@@ -21,12 +21,12 @@ function App() {
             })
             .finally(function () {
             });
-        console.log("sayfam render oldu");
+            
     }, []);
     return (
         <div className="App">
             {info && (
-                <Content icerik = {info}/>
+                <Content icerik={info} />
             )}
         </div>
     )
